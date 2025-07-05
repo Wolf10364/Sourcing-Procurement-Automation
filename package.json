@@ -1,0 +1,49 @@
+{
+  "name": "logiconnect-logistics-platform",
+  "version": "1.0.0",
+  "description": "Supply Chain Logistics Platform for SMEs - Connecting customers with shipping vehicles",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm start",
+    "mobile:dev": "cd mobile && npm start",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "test": "npm run test:server && npm run test:client",
+    "test:server": "cd server && npm test",
+    "test:client": "cd client && npm test",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install && cd ../mobile && npm install",
+    "setup": "npm run install:all && npm run db:setup",
+    "db:setup": "cd server && npm run db:setup",
+    "db:migrate": "cd server && npm run db:migrate",
+    "db:seed": "cd server && npm run db:seed"
+  },
+  "keywords": [
+    "logistics",
+    "supply-chain",
+    "SME",
+    "transportation",
+    "shipping",
+    "platform"
+  ],
+  "author": "LogiConnect Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/logiconnect-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/logiconnect-platform/issues"
+  },
+  "homepage": "https://github.com/your-org/logiconnect-platform#readme"
+} 
